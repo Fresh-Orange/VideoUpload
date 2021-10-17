@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/record_button"
+        android:layout_width="155dp"
+        android:layout_height="49dp"
+        android:layout_marginBottom="64dp"
+        android:text="点击录制视频"
+        app:layout_constraintBottom_toBottomOf="@+id/edit_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/edit_button"
+        android:layout_width="155dp"
+        android:layout_height="49dp"
+        android:layout_marginBottom="32dp"
+        android:text="绘制识别区域"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/post_button"
+        android:layout_width="155dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="64dp"
+        android:text="提交表单"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.523"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/positionEditText" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/VersionEditText"
+        android:layout_width="291dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="16dp"
+        android:hint="输入版本号"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/positionEditText"
+        android:layout_width="291dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="148dp"
+        android:layout_marginEnd="16dp"
+        android:editable="false"
+        android:hint="拍摄并绘制后得到"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/VersiontextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="版本号"
+        app:layout_constraintEnd_toStartOf="@+id/VersionEditText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/VersionEditText" />
+
+    <TextView
+        android:id="@+id/versiontextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="视频选取区域"
+        app:layout_constraintEnd_toStartOf="@+id/VersionEditText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/positionEditText" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginBottom="30dp"
+        android:text="文件路径："
+        app:layout_constraintBottom_toTopOf="@+id/record_button"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/file_path_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="未拍摄"
+        app:layout_constraintBottom_toBottomOf="@+id/textView2"
+        app:layout_constraintStart_toEndOf="@+id/textView2" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
